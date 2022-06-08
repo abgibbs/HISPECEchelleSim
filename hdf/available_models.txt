@@ -1,0 +1,12 @@
+MaroonX
+MaroonXred
+cubespec
+NEID
+VeloceRosso
+MARVEL_2021_11_22
+cubes_blue
+cubes_red
+HISPEC_HK_LFC
+HISPEC_HK_SCI
+HISPEC_HK_SKY_BKGD
+HISPEC_HK_DARK
