@@ -1,10 +1,16 @@
 # HISPECEchelleSim
 ### Requirements / Setup
-The primary requirement for running the echelle sim is the _pyechelle_ package. Install it directly from the [gitlab repo](https://gitlab.com/Stuermer/pyechelle). Installing the pip version may include some bugs that have been otherwise fixed. Note that pyechelle requires python 3.8 or newer for some of its dependencies.
+The primary requirement for running the echelle sim is the _pyechelle_ package. There is a fork of the original package, which makes using custom efficiency data work. Install it directly from the [gitlab repo](https://gitlab.com/abgibbs/pyechelle.git) using pip. Note that pyechelle requires python 3.8 or newer for some of its dependencies.
 
 After installing pyechelle, locate its root directory and copy the contents of the HISPECEchelleSim/hdf folder into the pyechelle/models folder, replacing the available_models.txt file. This is just making the HISPEC .hdf models available for use with pyechelle.  
+
+#### PSI-SIM
+We use the PSI-SIM package for collecting planetary and stellar spectra, and to calculate instrument throughput and thermal backgrounds. Install it from [github](https://github.com/planetarysystemsimager/psisim.git). You do not need to have the optional EXOSIMS or PICASO packages working.
+
+#### HxRG Noise Generator
+To simulate realistic detector noise, we use the nghxrg package. Once again, it can be installed from [github](https://github.com/BJRauscher/nghxrg.git).
 
 ### Current Notebooks
 The Constant Trace Creation notebook is used to simulate a constant flux across all HISPEC fibers. This can be used for trace fitting and demonstrates the basic scripting of pyechelle.
 
-The Standard Star Tutorial is WIP to simulate an observation of a standard star with realistic LFC, science, and sky background fibers, as well as the addition of detector noise. It is not currently valid, but does demonstrate the use of custom spectra with pyechelle.
+The Standard Star Tutorial is WIP to simulate an observation of a standard star with realistic LFC, science, and sky background fibers, as well as the addition of detector noise. It should be noted that it is a best guess at what the LFC, science, and sky fiber outputs will look like and is not a finished product, but it does demonstrate the use of custom spectra with pyechelle.
